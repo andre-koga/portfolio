@@ -1,3 +1,63 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Six+Caps&display=swap");
+
+html {
+  background-position: center;
+  background-image: radial-gradient(#ddd 2px, #fff 2px);
+  background-size: 40px 40px;
+  @apply font-cairo;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #00519e;
+  @apply rounded;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #0084ff;
+}
+
+#panel-1 {
+  @apply m-[2vh] flex h-[96vh] flex-col place-content-center items-center;
+
+  background: linear-gradient(#00000033, #00000033),
+    url(/images/bg.jpg) no-repeat;
+  background-size: cover;
+
+  .n1,
+  .n3 {
+    @apply text-[4vmin] text-white;
+  }
+  .n2 {
+    line-height: 70vmin;
+    @apply mb-2 font-sixcaps text-[70vmin] uppercase text-white mix-blend-difference;
+  }
+}
+
+#navbar {
+  li {
+    @apply flex-grow;
+  }
+  p {
+    @apply bg-black py-4 text-center text-white transition;
+  }
+  a.active p {
+    @apply bg-red-500;
+  }
+}
