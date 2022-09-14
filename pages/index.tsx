@@ -6,8 +6,8 @@ import { Navbar, Panel1, Panel2 } from "../components";
 const Home: NextPage = () => {
   return (
     <div>
-      <Panel1 />
       <Navbar />
+      <Panel1 />
       <Panel2 />
     </div>
   );

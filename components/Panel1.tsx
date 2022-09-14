@@ -1,9 +1,9 @@
 const Panel1 = () => {
   return (
-    <div id="panel-1">
-      <p className="n1">Hey! I'm</p>
+    <div className="panel-1">
+      <p className="n1">- developer, designer, leader -</p>
       <p className="n2">Koga</p>
-      <p className="n3">developer, designer, inventor</p>
+      <p className="n3">- nice to meet you! -</p>
     </div>
   );
 };

@@ -33,7 +33,24 @@ html {
   background: #0084ff;
 }
 
-#panel-1 {
+#navbar {
+  @apply fixed bottom-[4vh] right-1/2 flex translate-x-1/2 overflow-hidden rounded-full border border-black lg:right-[4vh] lg:bottom-1/2 lg:translate-x-0 lg:translate-y-1/2;
+
+  ol {
+    @apply flex flex-row lg:flex-col;
+  }
+  li {
+    @apply flex-grow;
+  }
+  p {
+    @apply bg-white px-6 py-1 text-center transition lg:py-8 lg:px-1;
+  }
+  a.active p {
+    @apply bg-black text-white;
+  }
+}
+
+.panel-1 {
   @apply m-[2vh] flex h-[96vh] flex-col place-content-center items-center;
 
   background: linear-gradient(#00000033, #00000033),
@@ -50,14 +67,6 @@ html {
   }
 }
 
-#navbar {
-  li {
-    @apply flex-grow;
-  }
-  p {
-    @apply bg-black py-4 text-center text-white transition;
-  }
-  a.active p {
-    @apply bg-red-500;
-  }
+.panel-2 {
+  @apply h-screen bg-red-500;
 }

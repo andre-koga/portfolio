@@ -12,11 +12,8 @@ const Navbar = () => {
   }, [router.asPath]);
 
   return (
-    <nav
-      id="navbar"
-      className="sticky top-0 w-full border-b-2 border-black bg-white"
-    >
-      <ol className="flex">
+    <nav id="navbar">
+      <ol>
         <NavbarButton tag={"/#about"} route={route} />
         <NavbarButton tag={"/#work"} route={route} />
         <NavbarButton tag={"/#contact"} route={route} />
