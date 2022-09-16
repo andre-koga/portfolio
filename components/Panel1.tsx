@@ -2,7 +2,7 @@ const Panel1 = () => {
   return (
     <div
       id="home"
-      className="panel-1 grid h-screen w-screen items-center justify-center gap-4"
+      className="panel-1 grid h-screen w-screen select-none items-center justify-center gap-4"
     >
       <h1 className="font-cairo flex flex-col text-center text-[5rem] leading-[0.8] md:block md:flex-row lg:text-[10rem]">
         <span className="font-roxborough">andré</span>{" "}

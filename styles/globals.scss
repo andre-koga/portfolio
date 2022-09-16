@@ -79,7 +79,29 @@ html {
     grid-area: 4 / 3 / 5 / 4;
     grid-template: 0.75rem 0.75rem / 0.75rem 0.75rem;
     span {
-      @apply h-3 w-3 bg-zinc-800;
+      @apply h-3 w-3 bg-[#ff004c];
     }
+    span:nth-child(1) {
+      animation: blinking 2s forwards infinite;
+    }
+    span:nth-child(2) {
+      animation: blinking 2s 0.5s forwards infinite;
+    }
+    span:nth-child(4) {
+      animation: blinking 2s 1s forwards infinite;
+    }
+    span:nth-child(3) {
+      animation: blinking 2s 1.5s forwards infinite;
+    }
+  }
+}
+
+@keyframes blinking {
+  0% {
+  }
+  50% {
+    @apply bg-zinc-100;
+  }
+  100% {
   }
 }
