@@ -1,13 +1,14 @@
 import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
 import { Navbar, Panel1, Panel2 } from "../components";
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Navbar />
       <Panel1 />
+      <Panel2 />
+      <Panel2 />
+      <Panel2 />
       <Panel2 />
     </div>
   );

@@ -7,8 +7,10 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      cairo: "Cairo",
-      sixcaps: "Six Caps",
+      roxborough: "Roxborough",
+      flex: "Roboto Flex",
+      jet: "JetBrains Mono",
+      space: "Space Mono",
     },
   },
   plugins: [],
