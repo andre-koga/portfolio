@@ -45,53 +45,55 @@ html {
 
 .panel-1 {
   grid-template: 4rem 1fr 1fr 1fr 1fr 1fr 4rem / 4rem 1fr 1fr 1fr 4rem;
+  h1 {
+    grid-area: 1 / 2 / 4 / 5;
+  }
+  .middle {
+    grid-area: 5 / 3 / 8 / 4;
+  }
+  .left {
+    grid-area: 5 / 2 / 8 / 3;
+  }
+  .right {
+    grid-area: 5 / 4 / 8 / 5;
+  }
+  .me {
+    z-index: -1;
+    @apply absolute bottom-[48%] right-1/2 w-48 translate-x-1/2 translate-y-1/2 -rotate-3;
+  }
+  .photo {
+    z-index: -2;
+    @apply absolute bottom-[48%] right-[30%] w-36 translate-x-1/2 translate-y-1/2 rotate-2;
+  }
+  .fam {
+    z-index: -2;
+    @apply absolute bottom-[49%] right-[58%] w-64 translate-x-1/2 translate-y-1/2 -rotate-6;
+  }
 
   @media (min-width: 768px) {
     h1 {
-      grid-area: 3 / 2 / 4 / 5;
+      grid-area: 2 / 2 / 4 / 5;
     }
     .middle {
-      grid-area: 5 / 3 / 6 / 4;
+      grid-area: 5 / 3 / 7 / 4;
     }
     .left {
-      grid-area: 5 / 2 / 6 / 3;
+      grid-area: 4 / 2 / 5 / 3;
     }
     .right {
-      grid-area: 5 / 4 / 6 / 5;
+      grid-area: 4 / 4 / 5 / 5;
     }
-    .cube {
-      grid-area: 4 / 3 / 5 / 4;
+    .me {
+      z-index: -1;
+      @apply absolute bottom-[48%] right-1/2 w-52 translate-x-1/2 translate-y-1/2 -rotate-3;
     }
-  }
-  h1 {
-    grid-area: 2 / 2 / 4 / 5;
-  }
-  .middle {
-    grid-area: 5 / 3 / 7 / 4;
-  }
-  .left {
-    grid-area: 5 / 2 / 7 / 3;
-  }
-  .right {
-    grid-area: 5 / 4 / 7 / 5;
-  }
-  .cube {
-    grid-area: 4 / 3 / 5 / 4;
-    grid-template: 0.75rem 0.75rem / 0.75rem 0.75rem;
-    span {
-      @apply h-3 w-3 bg-[#ff004c];
+    .photo {
+      z-index: -2;
+      @apply absolute bottom-[47%] right-[40%] w-48 translate-x-1/2 translate-y-1/2 rotate-2;
     }
-    span:nth-child(1) {
-      animation: blinking 2s forwards infinite;
-    }
-    span:nth-child(2) {
-      animation: blinking 2s 0.5s forwards infinite;
-    }
-    span:nth-child(4) {
-      animation: blinking 2s 1s forwards infinite;
-    }
-    span:nth-child(3) {
-      animation: blinking 2s 1.5s forwards infinite;
+    .fam {
+      z-index: -2;
+      @apply absolute bottom-[48%] right-[60%] w-64 translate-x-1/2 translate-y-1/2 -rotate-6;
     }
   }
 }

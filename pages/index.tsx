@@ -7,9 +7,6 @@ const Home: NextPage = () => {
       <Navbar />
       <Panel1 />
       <Panel2 />
-      <Panel2 />
-      <Panel2 />
-      <Panel2 />
     </div>
   );
 };

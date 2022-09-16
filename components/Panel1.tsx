@@ -24,12 +24,17 @@ const Panel1 = () => {
         <br />
         Wants to travel the world.
       </h2>
-      <div className="cube mx-auto grid gap-2">
-        <span />
-        <span />
-        <span />
-        <span />
-      </div>
+      <img className="me rounded-lg" src="/images/me.jpg" alt="It's me!" />
+      <img
+        className="fam rounded-lg"
+        src="/images/fam.jpg"
+        alt="My family, the best in the world!"
+      />
+      <img
+        className="photo rounded-lg"
+        src="/images/photo.jpg"
+        alt="Stylish photo"
+      />
     </div>
   );
 };
