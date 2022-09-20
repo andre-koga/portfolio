@@ -5,12 +5,16 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        pepper: "#ff0055",
+        mint: "#00ffaa",
+      },
+    },
     fontFamily: {
-      roxborough: "Roxborough",
-      flex: "Roboto Flex",
-      jet: "JetBrains Mono",
-      space: "Space Mono",
+      rox: "Roxborough", // Serif
+      flex: "Roboto Flex", // Sans-serif
+      jet: "JetBrains Mono", // Mono
     },
   },
   plugins: [],
