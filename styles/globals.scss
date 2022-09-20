@@ -34,6 +34,7 @@
 
 html {
   overflow-x: hidden;
+  cursor: crosshair;
 }
 
 #loading-screen {
@@ -86,15 +87,36 @@ html {
   font-variation-settings: "wdth" 151, "wght" 800;
 }
 
-html {
-  margin: 0;
-  height: 100%;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  perspective: 1px;
-  transform-style: preserve-3d;
+#experience > .grid {
+  grid-auto-rows: 18vmin;
+  > :nth-child(1) {
+    @apply border-t-2;
+  }
+  > a {
+    @apply border-b-2;
+  }
 }
 
-.pc {
-  transform: translateZ(-1px) scale(2);
+.experience-item:hover {
+  @apply text-mint;
+  * {
+    @apply text-mint;
+  }
+}
+
+.text-scroll {
+  animation: text-scroller 10s linear infinite;
+}
+
+.text-late-scroll {
+  animation: text-scroller 10s -5s linear infinite;
+}
+
+@keyframes text-scroller {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }

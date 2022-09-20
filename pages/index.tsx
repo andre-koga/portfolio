@@ -20,15 +20,17 @@ const Home: NextPage = () => {
   }, []);
 
   return (
-    <ParallaxProvider>
-      {/* <LoadingScreen /> */}
+    <div>
       <Navbar />
-      <Introduction />
-      <Experience />
-      <Projects />
-      <Skills />
-      <Awards />
-    </ParallaxProvider>
+      <ParallaxProvider>
+        {/* <LoadingScreen /> */}
+        <Introduction />
+        <Experience />
+        <Projects />
+        <Skills />
+        <Awards />
+      </ParallaxProvider>
+    </div>
   );
 };
 

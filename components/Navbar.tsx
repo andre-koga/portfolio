@@ -14,11 +14,11 @@ const Navbar = () => {
   return (
     <nav
       id="navbar"
-      className="fixed left-4 top-4 flex items-center gap-4 text-xl mix-blend-exclusion"
+      className="fixed left-4 top-4 z-40 flex items-center gap-4 mix-blend-exclusion md:text-xl"
     >
       <Link href={"/"}>
         <a className="active">
-          <p className="font-flex text-4xl text-stone-100">a⋆k</p>
+          <p className="font-flex text-xl text-white md:text-4xl">a⋆k</p>
         </a>
       </Link>
       <NavbarButton tag={"/#experience"} text="experience" route={route} />

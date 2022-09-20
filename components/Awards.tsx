@@ -1,5 +1,5 @@
 const Awards = () => {
-  return <div></div>;
+  return <section></section>;
 };
 
 export default Awards;

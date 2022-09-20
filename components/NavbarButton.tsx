@@ -10,7 +10,7 @@ const NavbarButton = ({ tag, text, route }: Props) => {
   return (
     <Link href={tag}>
       <a className={route === tag ? "active" : "non-active"}>
-        <p className="font-flex text-stone-100">{text}</p>
+        <p className="font-flex text-white">{text}</p>
       </a>
     </Link>
   );

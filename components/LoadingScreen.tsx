@@ -1,6 +1,6 @@
 const LoadingScreen = () => {
   return (
-    <div
+    <section
       id="loading-screen"
       className="fixed z-50 flex h-screen w-screen flex-col items-center justify-center overflow-hidden bg-stone-800 text-stone-100"
     >
@@ -11,7 +11,7 @@ const LoadingScreen = () => {
       <p className="text-center font-flex text-2xl lowercase leading-[1em]">
         Koga
       </p>
-    </div>
+    </section>
   );
 };
 
