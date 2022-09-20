@@ -23,7 +23,7 @@ const Home: NextPage = () => {
     <div>
       <Navbar />
       <ParallaxProvider>
-        {/* <LoadingScreen /> */}
+        <LoadingScreen />
         <Introduction />
         <Experience />
         <Projects />
