@@ -1,13 +1,34 @@
 import type { NextPage } from "next";
-import Link from "next/link";
-import { LoadingScreen, Navbar, Introduction } from "../components";
+import {
+  LoadingScreen,
+  Navbar,
+  Introduction,
+  Experience,
+  Projects,
+  Skills,
+  Awards,
+} from "../components";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 const Home: NextPage = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   return (
-    <div>
-      <LoadingScreen />
+    <ParallaxProvider>
+      {/* <LoadingScreen /> */}
+      <Navbar />
       <Introduction />
-    </div>
+      <Experience />
+      <Projects />
+      <Skills />
+      <Awards />
+    </ParallaxProvider>
   );
 };
 

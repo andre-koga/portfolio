@@ -14,14 +14,17 @@ const Navbar = () => {
   return (
     <nav
       id="navbar"
-      className="fixed right-1/2 top-8 translate-x-1/2 overflow-hidden"
+      className="fixed left-4 top-4 flex items-center gap-4 text-xl mix-blend-exclusion"
     >
-      <ol className="flex flex-row">
-        <NavbarButton tag={"/#home"} route={route} />
-        <NavbarButton tag={"/#work"} route={route} />
-        <NavbarButton tag={"/#fails"} route={route} />
-        <NavbarButton tag={"/#contact"} route={route} />
-      </ol>
+      <Link href={"/"}>
+        <a className="active">
+          <p className="font-flex text-4xl text-stone-100">a⋆k</p>
+        </a>
+      </Link>
+      <NavbarButton tag={"/#experience"} text="experience" route={route} />
+      <NavbarButton tag={"/#projects"} text="projects" route={route} />
+      <NavbarButton tag={"/#skills"} text="skills" route={route} />
+      <NavbarButton tag={"/#awards"} text="awards" route={route} />
     </nav>
   );
 };
