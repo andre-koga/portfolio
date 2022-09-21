@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+$pepper: #ff0055;
+$mint: #00ffaa;
+
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -9,17 +12,17 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #d6d3d1;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #292524;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: $mint;
 }
 
 // Flex, Jet, Space, Roxborough
