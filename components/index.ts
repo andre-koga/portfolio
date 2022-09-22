@@ -8,3 +8,4 @@ export { default as Skills } from "./Skills";
 export { default as Awards } from "./Awards";
 export { default as SectionTitle } from "./SectionTitle";
 export { default as ExperienceItem } from "./ExperienceItem";
+export { default as ProjectsItem } from "./ProjectsItem";

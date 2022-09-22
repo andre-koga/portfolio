@@ -22,7 +22,7 @@ $mint: #00ffaa;
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: $mint;
+  background: $pepper;
 }
 
 // Flex, Jet, Space, Roxborough
@@ -91,28 +91,25 @@ html {
 }
 
 #experience > .grid {
-  grid-auto-rows: 18vmin;
-  > :nth-child(1) {
-    @apply border-t-2;
-  }
+  grid-auto-rows: 30vmin;
   > a {
     @apply border-b-2;
   }
 }
 
 .experience-item:hover {
-  @apply text-mint;
+  @apply text-pepper;
   * {
-    @apply text-mint;
+    @apply text-pepper;
   }
 }
 
 .text-scroll {
-  animation: text-scroller 10s linear infinite;
+  animation: text-scroller 15s linear infinite;
 }
 
 .text-late-scroll {
-  animation: text-scroller 10s -5s linear infinite;
+  animation: text-scroller 15s -7.5s linear infinite;
 }
 
 @keyframes text-scroller {
@@ -121,5 +118,20 @@ html {
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+
+.pepper-shadow {
+  text-shadow: 0px 3px 0px $pepper;
+}
+
+.projects-wrapper {
+  @apply mx-[0vw];
+}
+
+.projects-item:hover {
+  @apply text-pepper;
+  * {
+    @apply text-pepper;
   }
 }
