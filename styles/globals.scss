@@ -95,3 +95,10 @@ article {
     min-height: 1em;
   }
 }
+
+.hover-pepper:hover {
+  @apply text-pepper;
+  * {
+    @apply text-pepper;
+  }
+}

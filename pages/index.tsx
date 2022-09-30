@@ -16,9 +16,10 @@ import client from "../client";
 
 type Props = {
   exps: any[];
+  projs: any[];
 };
 
-const Home: NextPage<Props> = ({ exps }) => {
+const Home: NextPage<Props> = ({ exps, projs }) => {
   useEffect(() => {
     AOS.init();
     AOS.refresh();
@@ -31,7 +32,7 @@ const Home: NextPage<Props> = ({ exps }) => {
         <LoadingScreen />
         <Introduction />
         <Experience exps={exps} />
-        <Projects />
+        <Projects projs={projs} />
         <Skills />
         <Awards />
       </ParallaxProvider>
@@ -41,10 +42,12 @@ const Home: NextPage<Props> = ({ exps }) => {
 
 export async function getStaticProps(context: any) {
   const exps = await client.fetch(`*[_type == "experience"]`);
+  const projs = await client.fetch(`*[_type == "project"]`);
 
   return {
     props: {
       exps,
+      projs,
     },
   };
 }

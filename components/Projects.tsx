@@ -1,6 +1,10 @@
 import { ProjectsItem, SectionTitle } from "./";
 
-const Projects = () => {
+type Props = {
+  projs: any[];
+};
+
+const Projects = ({ projs }: Props) => {
   return (
     <section id="projects" className="relative bg-stone-900 pb-60">
       <SectionTitle
@@ -11,36 +15,16 @@ const Projects = () => {
         borderColor="border-stone-200"
       />
       <div className="projects-wrapper">
-        <ProjectsItem
-          link="/"
-          image="/images/light.png"
-          title="koga.one"
-          text="Personal blog made with NextJS, Tailwind, Vercel, HygraphCMS"
-        />
-        <ProjectsItem
-          link="/"
-          image="/images/light.png"
-          title="Numerus"
-          text="Unique calculator made with NextJS and a multithread package"
-        />
-        <ProjectsItem
-          link="/"
-          image="/images/light.png"
-          title="Good Luck Collective"
-          text="Participates in a indie-game team. Competes in game jams from time to time"
-        />
-        <ProjectsItem
-          link="/"
-          image="/images/light.png"
-          title="Indie Games"
-          text="Publishes games on kogaone.itch.io made with Unity and C#"
-        />
-        <ProjectsItem
-          link="/"
-          image="/images/light.png"
-          title="Digital Art"
-          text="Posts digital art on Instagram (@color.koga)"
-        />
+        {projs.map((proj, i) => {
+          return (
+            <ProjectsItem
+              key={i}
+              link={proj.slug.current}
+              title={proj.title}
+              text={proj.short}
+            />
+          );
+        })}
       </div>
     </section>
   );
