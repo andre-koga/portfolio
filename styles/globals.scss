@@ -25,7 +25,7 @@ $mint: #00ffaa;
   background: $pepper;
 }
 
-// Flex, Jet, Space, Roxborough
+// Flex, Jet, Roxborough
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wdth,wght@8..144,25..151,100..1000&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&display=swap");
 @font-face {
@@ -90,48 +90,8 @@ html {
   font-variation-settings: "wdth" 151, "wght" 800;
 }
 
-#experience > .grid {
-  grid-auto-rows: 30vmin;
-  > a {
-    @apply border-b-2;
-  }
-}
-
-.experience-item:hover {
-  @apply text-pepper;
-  * {
-    @apply text-pepper;
-  }
-}
-
-.text-scroll {
-  animation: text-scroller 15s linear infinite;
-}
-
-.text-late-scroll {
-  animation: text-scroller 15s -7.5s linear infinite;
-}
-
-@keyframes text-scroller {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-.pepper-shadow {
-  text-shadow: 0px 3px 0px $pepper;
-}
-
-.projects-wrapper {
-  @apply mx-[0vw];
-}
-
-.projects-item:hover {
-  @apply text-pepper;
-  * {
-    @apply text-pepper;
+article {
+  p {
+    min-height: 1em;
   }
 }

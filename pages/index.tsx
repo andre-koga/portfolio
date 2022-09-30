@@ -12,8 +12,13 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { ParallaxProvider } from "react-scroll-parallax";
+import client from "../client";
 
-const Home: NextPage = () => {
+type Props = {
+  exps: any[];
+};
+
+const Home: NextPage<Props> = ({ exps }) => {
   useEffect(() => {
     AOS.init();
     AOS.refresh();
@@ -25,7 +30,7 @@ const Home: NextPage = () => {
       <ParallaxProvider>
         <LoadingScreen />
         <Introduction />
-        <Experience />
+        <Experience exps={exps} />
         <Projects />
         <Skills />
         <Awards />
@@ -33,5 +38,15 @@ const Home: NextPage = () => {
     </div>
   );
 };
+
+export async function getStaticProps(context: any) {
+  const exps = await client.fetch(`*[_type == "experience"]`);
+
+  return {
+    props: {
+      exps,
+    },
+  };
+}
 
 export default Home;

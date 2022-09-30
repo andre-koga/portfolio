@@ -20,8 +20,14 @@ const Projects = () => {
         <ProjectsItem
           link="/"
           image="/images/light.png"
-          title="numerus"
+          title="Numerus"
           text="Unique calculator made with NextJS and a multithread package"
+        />
+        <ProjectsItem
+          link="/"
+          image="/images/light.png"
+          title="Good Luck Collective"
+          text="Participates in a indie-game team. Competes in game jams from time to time"
         />
         <ProjectsItem
           link="/"
@@ -32,7 +38,7 @@ const Projects = () => {
         <ProjectsItem
           link="/"
           image="/images/light.png"
-          title="Digital art"
+          title="Digital Art"
           text="Posts digital art on Instagram (@color.koga)"
         />
       </div>

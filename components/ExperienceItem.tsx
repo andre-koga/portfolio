@@ -1,21 +1,29 @@
 import Link from "next/link";
+import imageUrlBuilder from "@sanity/image-url";
+import client from "../client";
+
+const builder = imageUrlBuilder(client);
+
+function urlFor(source: any) {
+  return builder.image(source);
+}
 
 type Props = {
   link: string;
-  image: string;
+  image: any;
   title: string;
   text: string;
 };
 
 const ExperienceItem = ({ link, image, title, text }: Props) => {
   return (
-    <Link href={link}>
+    <Link href={"/experience/" + link}>
       <a
         data-aos="fade-up"
         className="experience-item flex flex-row border-stone-800"
       >
         <img
-          src={image}
+          src={urlFor(image).url()}
           alt={text}
           className="w-[30vmin] rounded-r-2xl object-cover"
         />
