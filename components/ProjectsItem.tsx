@@ -8,7 +8,7 @@ type Props = {
 
 const ProjectsItem = ({ link, title, text }: Props) => {
   return (
-    <Link href={link}>
+    <Link href={"/project/" + link}>
       <a
         data-aos="fade-up"
         className="hover-pepper projects-item flex min-h-[20vmin] border-b-2 border-stone-100"

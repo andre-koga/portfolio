@@ -102,3 +102,28 @@ article {
     @apply text-pepper;
   }
 }
+
+@for $i from 1 through 11 {
+  .chars > span:nth-child(#{$i}) {
+    animation: breathe 2.5s infinite forwards alternate-reverse ease-in-out;
+    animation-delay: #{$i / 8}s;
+  }
+}
+
+.chars {
+  text-align: center;
+  line-height: 0.9em;
+  font-variation-settings: "wght" 900, "wdth" 151;
+}
+
+@keyframes breathe {
+  0% {
+    font-variation-settings: "wght" 300, "wdth" 151;
+  }
+  15% {
+    font-variation-settings: "wght" 900, "wdth" 151;
+  }
+  100% {
+    font-variation-settings: "wght" 900, "wdth" 151;
+  }
+}

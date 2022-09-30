@@ -25,10 +25,10 @@ const ExperienceItem = ({ link, image, title, text }: Props) => {
         <img
           src={urlFor(image).url()}
           alt={text}
-          className="min-h-[30vmin] w-[30vmin] rounded-r-2xl object-cover"
+          className="w-[30vmin] rounded-r-2xl object-cover"
         />
         <div className="border-r-2 border-stone-800">
-          <h3 className="active pl-[3vmin] pt-[3vmin] font-flex text-[2.5vmin] text-stone-800">
+          <h3 className="active pl-[3vmin] pt-[3vmin] font-flex text-[3vmin] text-stone-800">
             {title}
           </h3>
           <p className="flex-grow px-[3vmin] pb-[3vmin] font-jet text-[4vmin] text-stone-800 transition-all">

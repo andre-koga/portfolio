@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import {
-  LoadingScreen,
   Navbar,
   Introduction,
   Experience,
@@ -29,7 +28,6 @@ const Home: NextPage<Props> = ({ exps, projs }) => {
     <div>
       <Navbar />
       <ParallaxProvider>
-        <LoadingScreen />
         <Introduction />
         <Experience exps={exps} />
         <Projects projs={projs} />
