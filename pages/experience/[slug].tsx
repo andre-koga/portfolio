@@ -9,7 +9,7 @@ const Post = ({ post }: Props) => {
   return (
     <article>
       <h1>{post?.title}</h1>
-      <PortableText value={post.long} />
+      {/*<PortableText value={post.long} />*/}
     </article>
   );
 };
