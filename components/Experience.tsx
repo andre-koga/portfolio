@@ -6,10 +6,6 @@ type Props = {
 };
 
 const Experience = ({ exps }: Props) => {
-  exps.map((exp, i) => {
-    console.log(exp);
-  });
-
   return (
     <section id="experience" className="relative bg-stone-300">
       <SectionTitle

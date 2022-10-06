@@ -16,7 +16,7 @@ const Post = ({ post }: Props) => {
 
 export async function getStaticPaths() {
   const paths = await client.fetch(
-    `*[_type == "experience" && defined(slug.current)][].slug.current`
+    `*[_type == "skill" && defined(slug.current)][].slug.current`
   );
 
   return {
@@ -30,7 +30,7 @@ export async function getStaticProps(context: any) {
   const { slug = "" } = context.params;
   const post = await client.fetch(
     `
-    *[_type == "experience" && slug.current == $slug][0]
+    *[_type == "skill" && slug.current == $slug][0]
   `,
     { slug }
   );

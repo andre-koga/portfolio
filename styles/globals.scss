@@ -96,11 +96,8 @@ article {
   }
 }
 
-.hover-pepper:hover {
+.hover-pepper:hover > .arrow {
   @apply text-pepper;
-  * {
-    @apply text-pepper;
-  }
 }
 
 @for $i from 1 through 11 {

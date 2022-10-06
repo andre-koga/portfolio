@@ -6,7 +6,7 @@ type Props = {
 
 const Projects = ({ projs }: Props) => {
   return (
-    <section id="projects" className="relative bg-stone-900 pb-60">
+    <section id="projects" className="relative bg-stone-900">
       <SectionTitle
         number={2}
         title="Projects"

@@ -21,7 +21,7 @@ const ProjectsItem = ({ link, title, text }: Props) => {
             {text}
           </p>
         </div>
-        <p className="ml-auto self-center px-[3vmin] text-[12vmin] leading-[0em] text-stone-100 transition-all">
+        <p className="arrow ml-auto self-center px-[3vmin] text-[12vmin] leading-[0em] text-stone-100 transition-all">
           ⤷
         </p>
       </a>

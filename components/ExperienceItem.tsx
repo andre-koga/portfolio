@@ -35,7 +35,7 @@ const ExperienceItem = ({ link, image, title, text }: Props) => {
             {text}
           </p>
         </div>
-        <p className="ml-auto self-center px-[3vmin] text-[12vmin] leading-[0em] transition-all">
+        <p className="arrow ml-auto self-center px-[3vmin] text-[12vmin] leading-[0em] transition-all">
           ⤷
         </p>
       </a>
