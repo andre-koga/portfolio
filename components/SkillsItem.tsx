@@ -6,6 +6,7 @@ let colors = [
   "bg-orange-400 text-stone-800",
   "bg-red-600",
 ];
+let orders = ["order-1", "order-2", "order-3"];
 type Props = { skill: any };
 
 const SkillsItem = ({ skill }: Props) => {
@@ -26,8 +27,7 @@ const SkillsItem = ({ skill }: Props) => {
                   key={j}
                   className={
                     "m-0 flex items-center whitespace-nowrap rounded-lg bg-stone-800 px-2 py-0.5 font-jet text-[3vmin] text-stone-100 transition-all " +
-                    "order-" +
-                    (4 - item.level)
+                    orders[3 - item.level]
                   }
                 >
                   {item.title}
