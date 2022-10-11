@@ -45,7 +45,9 @@ export async function getStaticProps(context: any) {
   const exps = await client.fetch(`*[_type == "experience"]`);
   const projs = await client.fetch(`*[_type == "project"]`);
   const skills = await client.fetch(`*[_type == "skill"]`);
-  const awards = await client.fetch(`*[_type == "award"]`);
+  const awards = await client.fetch(
+    `*[_type == "award"] | order(title desc)[0...7]`
+  );
 
   return {
     props: {
