@@ -17,9 +17,10 @@ type Props = {
   exps: any[];
   projs: any[];
   skills: any[];
+  awards: any[];
 };
 
-const Home: NextPage<Props> = ({ exps, projs, skills }) => {
+const Home: NextPage<Props> = ({ exps, projs, skills, awards }) => {
   useEffect(() => {
     AOS.init();
     AOS.refresh();
@@ -33,7 +34,7 @@ const Home: NextPage<Props> = ({ exps, projs, skills }) => {
         <Experience exps={exps} />
         <Projects projs={projs} />
         <Skills skills={skills} />
-        <Awards />
+        <Awards awards={awards} />
         <div className="h-[100vh]"></div>
       </ParallaxProvider>
     </div>
@@ -44,12 +45,14 @@ export async function getStaticProps(context: any) {
   const exps = await client.fetch(`*[_type == "experience"]`);
   const projs = await client.fetch(`*[_type == "project"]`);
   const skills = await client.fetch(`*[_type == "skill"]`);
+  const awards = await client.fetch(`*[_type == "award"]`);
 
   return {
     props: {
       exps,
       projs,
       skills,
+      awards,
     },
   };
 }
