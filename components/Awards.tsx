@@ -16,8 +16,8 @@ const Awards = ({ awards }: Props) => {
         borderColor="border-stone-300"
       />
       <div className="grid grid-cols-1">
-        {awards.map((award) => {
-          return <AwardItem award={award} />;
+        {awards.map((award, i) => {
+          return <AwardItem key={i} award={award} i={i} />;
         })}
       </div>
     </section>

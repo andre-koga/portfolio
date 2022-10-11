@@ -1,19 +1,23 @@
 import Link from "next/link";
 
-let levels = ["gold", "slvr", "brnz", "1st", "2nd", "3rd"];
+let levels = ["gold", "slvr", "brnz", "honr", "1st", "2nd", "3rd"];
 let levelsColors = [
   "bg-amber-400 text-stone-800",
   "bg-slate-300 text-stone-800",
   "bg-yellow-600 text-stone-800",
+  "bg-indigo-300 text-stone-800",
   "bg-amber-400 text-stone-800",
   "bg-slate-300 text-stone-800",
   "bg-yellow-600 text-stone-800",
 ];
-let subjects = ["Math", "Phys", "prog"];
+let subjects = ["Math", "Phys", "Comp", "Astr", "Robo", "Chem"];
 let subjectsColors = [
   "bg-red-600 text-stone-100",
   "bg-indigo-500 text-stone-100",
   "bg-cyan-600 text-stone-100",
+  "bg-blue-700 text-stone-100",
+  "bg-slate-600 text-stone-100",
+  "bg-emerald-600 text-stone-100",
 ];
 let regions = ["intl", "natl", "rgnl"];
 let regionsColors = [
@@ -22,20 +26,21 @@ let regionsColors = [
   "bg-black text-orange-400",
 ];
 let orders = ["order-1", "order-2", "order-3"];
-type Props = { award: any };
+type Props = { award: any; i: number };
 
-const SkillsItem = ({ award }: Props) => {
+const SkillsItem = ({ award, i }: Props) => {
   return (
     <Link href={"/award/" + award.slug.current} className="p-8">
       <a
         data-aos="fade-up"
         className="hover-pepper flex border-b-2 border-stone-800"
+        style={{ order: i }}
       >
         <div className="flex-grow border-r-2 border-stone-800 p-[3vmin]">
           <h3 className="active mb-[2vmin] font-flex text-[5vmin]">
             {award.title}
           </h3>
-          <div className="flex flex-wrap gap-2">
+          <div className="grid grid-cols-1 gap-2 lg:grid-cols-2">
             {award.items.map((item: any, j: number) => {
               return (
                 <p

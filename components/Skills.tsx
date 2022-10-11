@@ -6,7 +6,7 @@ type Props = {
 };
 
 const Skills = ({ skills }: Props) => {
-  console.log(skills);
+  //console.log(skills);
 
   return (
     <section id="skills" className="relative bg-stone-300">
