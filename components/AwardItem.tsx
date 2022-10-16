@@ -33,11 +33,11 @@ const SkillsItem = ({ award, i }: Props) => {
     <Link href={"/award/" + award.slug.current} className="p-8">
       <a
         data-aos="fade-up"
-        className="hover-pepper flex border-b-2 border-stone-800"
+        className="hover-pepper flex border-b-2 border-stone-100"
         style={{ order: i }}
       >
-        <div className="flex-grow border-r-2 border-stone-800 p-[3vmin]">
-          <h3 className="active mb-[2vmin] font-flex text-[5vmin]">
+        <div className="flex-grow border-r-2 border-stone-100 p-[3vmin]">
+          <h3 className="active mb-[2vmin] font-flex text-[5vmin] text-stone-100">
             {award.title}
           </h3>
           <div className="grid grid-cols-1 gap-2 lg:grid-cols-2">
@@ -80,7 +80,7 @@ const SkillsItem = ({ award, i }: Props) => {
             })}
           </div>
         </div>
-        <p className="arrow ml-auto self-center px-[3vmin] text-[12vmin] leading-[0em] text-stone-800 transition-all">
+        <p className="arrow ml-auto self-center px-[3vmin] text-[12vmin] leading-[0em] text-stone-100 transition-all">
           ⤷
         </p>
       </a>

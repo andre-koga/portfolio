@@ -15,7 +15,7 @@ const Awards = ({ awards }: Props) => {
         textColor="text-pepper"
         borderColor="border-stone-300"
       />
-      <div className="grid grid-cols-1">
+      <div className="grid grid-cols-1 bg-stone-800">
         {awards.map((award, i) => {
           return <AwardItem key={i} award={award} i={i} />;
         })}
