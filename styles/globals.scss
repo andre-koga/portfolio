@@ -96,7 +96,10 @@ article {
   }
 }
 
-.hover-pepper:hover > .arrow {
+.arrow {
+  @apply transition-all;
+}
+.hover-pepper:hover .arrow {
   @apply text-pepper;
 }
 
@@ -122,5 +125,17 @@ article {
   }
   100% {
     font-variation-settings: "wght" 900, "wdth" 151;
+  }
+}
+
+// Experience Page
+.experience-grid {
+  grid-template: 1fr / 2fr 1fr;
+
+  .achievements {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .tools-used {
+    grid-area: 1 / 2 / 2 / 3;
   }
 }

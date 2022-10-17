@@ -43,39 +43,37 @@ const SkillsItem = ({ award, i }: Props) => {
           <div className="grid grid-cols-1 gap-2 lg:grid-cols-2">
             {award.items.map((item: any, j: number) => {
               return (
-                <p
-                  key={j}
-                  className={
-                    "m-0 flex items-center gap-2 whitespace-nowrap rounded-lg bg-stone-800 px-2 py-0.5 font-jet text-[2vmin] text-stone-100 transition-all " +
-                    orders[item.region - 1]
-                  }
-                >
-                  <span
-                    className={
-                      "rounded px-1 text-[1.5vmin] font-bold uppercase " +
-                      regionsColors[item.region - 1]
-                    }
-                  >
-                    {regions[item.region - 1]}
-                  </span>
-                  <span
-                    className={
-                      "rounded px-1 text-[1.5vmin] font-bold uppercase " +
-                      levelsColors[item.level - 1]
-                    }
-                  >
-                    {levels[item.level - 1]}
-                  </span>
-                  <span
-                    className={
-                      "rounded px-1 text-[1.5vmin] font-bold uppercase " +
-                      subjectsColors[item.subject - 1]
-                    }
-                  >
-                    {subjects[item.subject - 1]}
-                  </span>
-                  {item.title}
-                </p>
+                <div key={j} className={"md:flex" + orders[item.region - 1]}>
+                  <p className="m-0 flex items-center gap-2 whitespace-nowrap rounded-lg bg-stone-800 px-2 py-0.5 font-jet text-[2.5vmin] text-stone-100 transition-all">
+                    <span
+                      className={
+                        "rounded px-1 text-sm font-bold uppercase " +
+                        regionsColors[item.region - 1]
+                      }
+                    >
+                      {regions[item.region - 1]}
+                    </span>
+                    <span
+                      className={
+                        "rounded px-1 text-sm font-bold uppercase " +
+                        levelsColors[item.level - 1]
+                      }
+                    >
+                      {levels[item.level - 1]}
+                    </span>
+                    <span
+                      className={
+                        "rounded px-1 text-sm font-bold uppercase " +
+                        subjectsColors[item.subject - 1]
+                      }
+                    >
+                      {subjects[item.subject - 1]}
+                    </span>
+                  </p>
+                  <p className="mt-1 mb-2 items-center gap-2 whitespace-nowrap rounded-lg bg-stone-800 px-2 py-0.5 font-jet text-[3.5vmin] text-stone-100 transition-all">
+                    {item.title}
+                  </p>
+                </div>
               );
             })}
           </div>
