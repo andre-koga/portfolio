@@ -20,7 +20,7 @@ const Post = ({ post, prev, next }: Props) => {
       <div className="min-h-screen">
         <div className="experience-image bg-stone-800">
           <Image
-            src={urlFor(post.image).url()}
+            src={urlFor(post?.image).url()}
             style={{ objectPosition: post.objectPosition }}
             className="h-[15vmin] w-full rounded-b-xl object-cover"
           />
