@@ -18,7 +18,18 @@ const Post = ({ post, prev, next }: Props) => {
   return (
     <article className="bg-stone-200">
       <div className="min-h-screen">
-        <div className="experience-image relative h-[15vmin] w-full overflow-hidden bg-stone-800"></div>
+        <div className="experience-image relative h-[15vmin] w-full overflow-hidden bg-stone-800">
+          {/* {post?.image && (
+            <Image
+              src={urlFor(post.image).url()}
+              layout="fill"
+              alt="Banner for experience page"
+              objectFit="cover"
+              objectPosition={post.objectPosition}
+              className="rounded-b-xl"
+            />
+          )} */}
+        </div>
         <div className="hover-pepper flex min-h-[35vh] bg-stone-800">
           <a
             className={prev?.slug ? "" : "pointer-events-none"}
@@ -37,7 +48,7 @@ const Post = ({ post, prev, next }: Props) => {
           </a>
           <div className="flex-grow py-8 px-4">
             <p className="text-center font-jet text-[2.5vmin] text-stone-400">
-              {post.date}
+              {post?.date}
             </p>
             <h1 className="my-8 w-full pr-6 text-center font-rox text-[12vmin] leading-[1.2em] text-stone-200">
               {post?.title}
