@@ -18,11 +18,15 @@ const Post = ({ post, prev, next }: Props) => {
     <article className="bg-stone-200">
       <div className="min-h-screen">
         <div className="experience-image bg-stone-800">
-          <img
-            src={urlFor(post.image).url()}
-            style={{ objectPosition: post.objectPosition }}
-            className="h-[15vmin] w-full rounded-b-xl object-cover"
-          />
+          {post.image ? (
+            <img
+              src={urlFor(post.image).url()}
+              style={{ objectPosition: post.objectPosition }}
+              className="h-[15vmin] w-full rounded-b-xl object-cover"
+            />
+          ) : (
+            <div></div>
+          )}
         </div>
         <div className="hover-pepper flex min-h-[35vh] bg-stone-800">
           <a
