@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const Introduction = () => {
   return (
     <section
@@ -19,19 +17,19 @@ const Introduction = () => {
         <span>a</span>
       </h1>
       <p className="text-center font-rox text-[11vmin] lowercase">
-        <Image
+        <img
           className="mx-[4vmin] mb-[2vmin] -mt-[2vmin] inline-block h-[16vmin] rotate-6 rounded-xl"
           src="/images/me.jpg"
           alt=""
         />
         <span>Web-designer, full-stack developer, digital artist</span>
-        <Image
+        <img
           className="mx-[4vmin] mb-[2vmin] -mt-[2vmin] inline-block h-[16vmin] -rotate-2 rounded-xl"
           src="/images/light.png"
           alt=""
         />
         <span>Strives to do his best in any task ― Based in Atlanta</span>
-        <Image
+        <img
           className="mx-[4vmin] mb-[2vmin] -mt-[2vmin] inline-block h-[16vmin] rotate-3 rounded-xl"
           src="/images/atlanta.jpg"
           alt=""
