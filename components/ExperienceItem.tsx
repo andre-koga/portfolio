@@ -1,6 +1,7 @@
 import Link from "next/link";
 import imageUrlBuilder from "@sanity/image-url";
 import client from "../client";
+import Image from "next/image";
 
 const builder = imageUrlBuilder(client);
 
@@ -22,7 +23,7 @@ const ExperienceItem = ({ link, image, title, text }: Props) => {
         data-aos="fade-up"
         className="hover-pepper experience-item flex flex-row border-b-2 border-stone-800"
       >
-        <img
+        <Image
           src={urlFor(image).url()}
           alt={text}
           className="w-[30vmin] rounded-r-2xl object-cover"

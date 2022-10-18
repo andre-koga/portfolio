@@ -1,4 +1,5 @@
 import imageUrlBuilder from "@sanity/image-url";
+import Image from "next/image";
 import client from "../../client";
 
 const builder = imageUrlBuilder(client);
@@ -18,15 +19,11 @@ const Post = ({ post, prev, next }: Props) => {
     <article className="bg-stone-200">
       <div className="min-h-screen">
         <div className="experience-image bg-stone-800">
-          {post.image ? (
-            <img
-              src={urlFor(post.image).url()}
-              style={{ objectPosition: post.objectPosition }}
-              className="h-[15vmin] w-full rounded-b-xl object-cover"
-            />
-          ) : (
-            <div></div>
-          )}
+          <Image
+            src={urlFor(post.image).url()}
+            style={{ objectPosition: post.objectPosition }}
+            className="h-[15vmin] w-full rounded-b-xl object-cover"
+          />
         </div>
         <div className="hover-pepper flex min-h-[35vh] bg-stone-800">
           <a
