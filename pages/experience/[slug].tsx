@@ -1,6 +1,5 @@
-import client from "../../client";
 import imageUrlBuilder from "@sanity/image-url";
-import { PortableText } from "@portabletext/react";
+import client from "../../client";
 
 const builder = imageUrlBuilder(client);
 
@@ -85,7 +84,6 @@ const Post = ({ post, prev, next }: Props) => {
                 </div>
               );
             })}
-            <PortableText value={post.long} />
           </div>
           <div className="tools-used">
             <h2 className="active mx-[4vmin] my-[2vmin] font-flex text-[6vmin]">
