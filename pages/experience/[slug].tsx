@@ -54,7 +54,7 @@ const Post = ({ post, prev, next }: Props) => {
               {post?.title}
             </h1>
             <p className="px-12 text-center font-jet text-[3vmin] text-stone-400">
-              {post.short}
+              {post?.short}
             </p>
           </div>
           <a
@@ -78,7 +78,7 @@ const Post = ({ post, prev, next }: Props) => {
             <h2 className="active mx-[4vmin] my-[2vmin] font-flex text-[6vmin]">
               Achievements
             </h2>
-            {post.long?.map((item: any, i: number) => {
+            {post?.long.map((item: any, i: number) => {
               return (
                 <div key={i} className="m-[2vmin] flex">
                   <div className="mr-[2vmin] flex items-center justify-items-center rounded-md bg-pepper px-2 font-jet text-[4vmin] text-stone-200">
@@ -96,7 +96,7 @@ const Post = ({ post, prev, next }: Props) => {
               Tools Used
             </h2>
             <div className="m-[2vmin] flex flex-wrap gap-[2vmin]">
-              {post.tools?.map((tool: any, i: number) => {
+              {post?.tools.map((tool: any, i: number) => {
                 return (
                   <div
                     key={i}
