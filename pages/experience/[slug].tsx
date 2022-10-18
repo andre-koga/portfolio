@@ -19,14 +19,16 @@ const Post = ({ post, prev, next }: Props) => {
     <article className="bg-stone-200">
       <div className="min-h-screen">
         <div className="experience-image relative h-[15vmin] w-full overflow-hidden bg-stone-800">
-          <Image
-            src={urlFor(post?.image).url()}
-            layout="fill"
-            alt="Banner for experience page"
-            objectFit="cover"
-            objectPosition={post.objectPosition}
-            className="rounded-b-xl"
-          />
+          {post.image && (
+            <Image
+              src={urlFor(post?.image).url()}
+              layout="fill"
+              alt="Banner for experience page"
+              objectFit="cover"
+              objectPosition={post.objectPosition}
+              className="rounded-b-xl"
+            />
+          )}
         </div>
         <div className="hover-pepper flex min-h-[35vh] bg-stone-800">
           <a
