@@ -28,7 +28,6 @@ const Home: NextPage<Props> = ({ exps, projs, skills, awards }) => {
 
   return (
     <div>
-      <Navbar />
       <ParallaxProvider>
         <Introduction />
         <Experience exps={exps} />
