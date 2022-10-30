@@ -10,3 +10,4 @@ export { default as ExperienceItem } from "./ExperienceItem";
 export { default as ProjectsItem } from "./ProjectsItem";
 export { default as SkillsItem } from "./SkillsItem";
 export { default as AwardItem } from "./AwardItem";
+export { default as Footer } from "./Footer";

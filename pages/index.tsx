@@ -34,7 +34,6 @@ const Home: NextPage<Props> = ({ exps, projs, skills, awards }) => {
         <Projects projs={projs} />
         <Skills skills={skills} />
         <Awards awards={awards} />
-        <div className="h-[100vh]"></div>
       </ParallaxProvider>
     </div>
   );

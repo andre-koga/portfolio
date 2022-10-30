@@ -19,7 +19,7 @@ const Projects = ({ projs }: Props) => {
           return (
             <ProjectsItem
               key={i}
-              link={proj.slug.current}
+              link={proj.link}
               title={proj.title}
               text={proj.short}
             />
