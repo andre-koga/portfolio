@@ -1,4 +1,4 @@
-import { ProjectsItem, SectionTitle } from "./";
+import { ProjectsItem, SectionTitle } from ".";
 
 type Props = {
   projs: any[];
